@@ -6,6 +6,9 @@ package gis.capsule;
 
 import javax.microedition.midlet.*;
 import javax.microedition.lcdui.*;
+import net.sf.microlog.core.LoggerFactory;
+import net.sf.microlog.core.PropertyConfigurator;
+import net.sf.microlog.midp.MIDletPropertyConfigurator;
 
 /**
  * CapsuleAgent MIDlet.
@@ -41,6 +44,8 @@ private Command stop;
      * The Tracker constructor.
      */
     public CapsuleAgent() {
+        // Init the logger
+        MIDletPropertyConfigurator.configure();
     }
 
 //<editor-fold defaultstate="collapsed" desc=" Generated Methods ">//GEN-BEGIN:|methods|0|
@@ -408,6 +413,7 @@ return missionID;
      * @param unconditional if true, then the MIDlet has to be unconditionally terminated and all resources has to be released.
      */
     public void destroyApp(boolean unconditional) {
+        LoggerFactory.shutdown();
     }
     
     public void startTracking(){

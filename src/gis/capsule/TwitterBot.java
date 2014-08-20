@@ -28,14 +28,11 @@ public class TwitterBot {
     private static final String CONSUMER_KEY = null;
     private static final String CONSUMER_SECRET = null; 
     
-    private static final Token ACCESS_TOKEN = 
-        new Token(ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET);
-    
     private TweetER ter = null;
     
     public TwitterBot() throws IOException {
         Credential c = new Credential(BOT_SCREENNAME, CONSUMER_KEY, 
-            CONSUMER_SECRET, ACCESS_TOKEN);
+            CONSUMER_SECRET, getAccessToken());
         UserAccountManager m = UserAccountManager.getInstance(c);
         m.setServiceURL(
             UserAccountManager.TWITTER_API_URL_SERVICE_ACCOUNT_VERIFY_CREDENTIALS, 
@@ -72,5 +69,9 @@ public class TwitterBot {
         }catch(LimitExceededException lee){
             throw new IOException("Twitter limit exceeded: "+lee);
         }
+    }
+    
+    private Token getAccessToken(){
+        return new Token(ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET);
     }
 }
