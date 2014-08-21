@@ -56,7 +56,6 @@ public class Worker implements Runnable {
     private final int interval;
     private boolean running = false;
     private Locator locator = null;
-    //private Location location = null;
     private String missionID = "TESTING";
     
     private TwitterBot twitterBot = null;
@@ -207,6 +206,7 @@ public class Worker implements Runnable {
         request.setUrl("http://"+this.parent.getMcUrlAInput().getString());
         try{
             this.connection.send(request);
+            LOG.info("Published data");
         }catch(Throwable ta){
             this.parent.updateConnStatus(NO_CONNECTION+" URL A, trying URL B");
             LOG.error("Failed to connect to URL A, trying URL B", ta);
