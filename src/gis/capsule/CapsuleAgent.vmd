@@ -107,7 +107,7 @@
                         <Property name="codeGenerated" typeID="Pboolean" value="Vtrue"/>
                         <Property name="label" typeID="Pjava.lang.String" value="VMission Control URL A"/>
                         <Property name="itemCommandListener" typeID="C#ItemCommandListener" value="R8"/>
-                        <Property name="text" typeID="Pjava.lang.String" value="V"/>
+                        <Property name="text" typeID="Pjava.lang.String" value="Vtest1.geeksinspace.org.uk:9999/capsule"/>
                         <Property name="maxSize" typeID="Pint" value="V64"/>
                         <Property name="constraints" typeID="Pint" value="V0"/>
                     </Component>
@@ -116,7 +116,7 @@
                         <Property name="codeGenerated" typeID="Pboolean" value="Vtrue"/>
                         <Property name="label" typeID="Pjava.lang.String" value="VMission Control URL B"/>
                         <Property name="itemCommandListener" typeID="C#ItemCommandListener" value="R8"/>
-                        <Property name="text" typeID="Pjava.lang.String" value="V"/>
+                        <Property name="text" typeID="Pjava.lang.String" value="Vtest2.geeksinspace.org.uk:9999/capsule"/>
                         <Property name="maxSize" typeID="Pint" value="V64"/>
                         <Property name="constraints" typeID="Pint" value="V0"/>
                     </Component>

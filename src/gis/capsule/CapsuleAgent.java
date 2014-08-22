@@ -7,7 +7,6 @@ package gis.capsule;
 import javax.microedition.midlet.*;
 import javax.microedition.lcdui.*;
 import net.sf.microlog.core.LoggerFactory;
-import net.sf.microlog.core.PropertyConfigurator;
 import net.sf.microlog.midp.MIDletPropertyConfigurator;
 
 /**

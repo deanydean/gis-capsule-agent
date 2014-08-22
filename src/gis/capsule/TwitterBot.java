@@ -4,6 +4,7 @@
  */
 package gis.capsule;
 
+import com.sun.midp.io.Properties;
 import com.twitterapime.rest.Credential;
 import com.twitterapime.rest.GeoLocation;
 import com.twitterapime.rest.TweetER;
@@ -20,14 +21,13 @@ import java.io.IOException;
 public class TwitterBot {
     
     // Parameters to be filled in per account
-    // DO NOT commit the values
-    // TODO: Provide parameters from external resource file
-    private static final String BOT_SCREENNAME = null;
-    private static final String ACCESS_TOKEN_KEY = null;
-    private static final String ACCESS_TOKEN_SECRET = null; 
-    private static final String CONSUMER_KEY = null;
-    private static final String CONSUMER_SECRET = null; 
-    
+    // Define a class gis.capsule.TwitterAccount with below params 
+    private static final String BOT_SCREENNAME = TwitterAccount.SCREEN_NAME;
+    private static final String ACCESS_TOKEN_KEY = TwitterAccount.TOKEN_KEY;
+    private static final String ACCESS_TOKEN_SECRET = TwitterAccount.TOKEN_SECRET; 
+    private static final String CONSUMER_KEY = TwitterAccount.CONSUMER_KEY;
+    private static final String CONSUMER_SECRET = TwitterAccount.CONSUMER_SECRET;
+
     private TweetER ter = null;
     
     public TwitterBot() throws IOException {

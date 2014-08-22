@@ -2,3 +2,4 @@ lib
 build
 /nbproject/private/
 /dist/
+src/gis/capsule/TwitterAccount.java
